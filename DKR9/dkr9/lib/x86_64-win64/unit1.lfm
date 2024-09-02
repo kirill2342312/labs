@@ -1,0 +1,176 @@
+object Fmain: TFmain
+  Left = 388
+  Height = 240
+  Top = 212
+  Width = 332
+  Caption = 'Мониторы'
+  ClientHeight = 240
+  ClientWidth = 332
+  Color = clMenuHighlight
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '3.2.0.0'
+  object title: TLabel
+    AnchorSideRight.Control = TitleEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 15
+    Height = 20
+    Top = 24
+    Width = 142
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Bottom = 1
+    BorderSpacing.Around = 10
+    Caption = 'Название монитора'
+  end
+  object ProducerL: TLabel
+    AnchorSideRight.Control = ProducerEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 48
+    Height = 20
+    Top = 56
+    Width = 109
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Производитель'
+  end
+  object HDR1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = LightCheckbox
+    AnchorSideBottom.Control = HZ1
+    AnchorSideBottom.Side = asrBottom
+    Left = 85
+    Height = 20
+    Top = 90
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 75
+    BorderSpacing.Right = 75
+    BorderSpacing.Bottom = 20
+    BorderSpacing.Around = 10
+    Caption = 'Изогнутый'
+  end
+  object LightCheckbox: TCheckBox
+    AnchorSideLeft.Control = HDR1
+    AnchorSideTop.Control = ProducerL
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = HZ
+    Left = 170
+    Height = 20
+    Top = 92
+    Width = 21
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 80
+    BorderSpacing.Around = 5
+    TabOrder = 0
+  end
+  object HZ1: TLabel
+    AnchorSideRight.Control = HZ
+    AnchorSideBottom.Side = asrBottom
+    Left = 13
+    Height = 20
+    Top = 120
+    Width = 144
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Частота обновления'
+  end
+  object Diagonal: TLabel
+    AnchorSideRight.Control = DiagonalEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 8
+    Height = 20
+    Top = 150
+    Width = 149
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Диагональ монитора'
+  end
+  object Nextt: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 204
+    Height = 28
+    Top = 192
+    Width = 108
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 20
+    Caption = 'Следующий'
+    TabOrder = 1
+    OnClick = NexttClick
+  end
+  object Previouss: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 20
+    Height = 30
+    Top = 190
+    Width = 118
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 20
+    Caption = 'Предыдущий'
+    TabOrder = 2
+    OnClick = PrevioussClick
+  end
+  object TitleEdit: TEdit
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ProducerEdit
+    Left = 167
+    Height = 30
+    Top = 20
+    Width = 160
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 15
+    BorderSpacing.Around = 5
+    TabOrder = 3
+    OnChange = TitleEditChange
+  end
+  object ProducerEdit: TEdit
+    AnchorSideTop.Control = title
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = LightCheckbox
+    Left = 167
+    Height = 32
+    Top = 55
+    Width = 160
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 4
+  end
+  object HZ: TEdit
+    AnchorSideTop.Control = HDR1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = DiagonalEdit
+    Left = 167
+    Height = 28
+    Top = 117
+    Width = 160
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 5
+  end
+  object DiagonalEdit: TEdit
+    AnchorSideTop.Control = HZ1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Nextt
+    Left = 167
+    Height = 22
+    Top = 150
+    Width = 160
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 6
+  end
+end

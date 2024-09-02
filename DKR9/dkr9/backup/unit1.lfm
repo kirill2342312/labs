@@ -1,0 +1,186 @@
+object Fmain: TFmain
+  Left = 417
+  Height = 329
+  Top = 229
+  Width = 448
+  Caption = 'Компьютерные мыши'
+  ClientHeight = 0
+  ClientWidth = 0
+  Color = clSkyBlue
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '3.2.0.0'
+  object NameMouse: TLabel
+    AnchorSideRight.Control = TitleEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 45
+    Height = 20
+    Top = 101
+    Width = 115
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Bottom = 1
+    BorderSpacing.Around = 10
+    Caption = 'Название мыши'
+    OnClick = NameMouseClick
+  end
+  object Proizvod: TLabel
+    AnchorSideRight.Control = ProducerEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 51
+    Height = 20
+    Top = 149
+    Width = 109
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Производитель'
+    OnClick = ProizvodClick
+  end
+  object Podsvetka: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = LightCheckbox
+    AnchorSideBottom.Control = HZhz
+    AnchorSideBottom.Side = asrBottom
+    Left = 85
+    Height = 20
+    Top = 169
+    Width = 72
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 75
+    BorderSpacing.Right = 75
+    BorderSpacing.Bottom = 20
+    BorderSpacing.Around = 10
+    Caption = 'Подсветка'
+    OnClick = PodsvetkaClick
+  end
+  object LightCheckbox: TCheckBox
+    AnchorSideLeft.Control = Podsvetka
+    AnchorSideTop.Control = Proizvod
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = HZ
+    Left = 170
+    Height = 20
+    Top = 171
+    Width = 21
+    Alignment = taLeftJustify
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 80
+    BorderSpacing.Around = 5
+    TabOrder = 0
+    OnChange = LightCheckboxChange
+  end
+  object HZhz: TLabel
+    AnchorSideRight.Control = HZ
+    AnchorSideBottom.Side = asrBottom
+    Left = 28
+    Height = 20
+    Top = 199
+    Width = 172
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Частота обновления(Hz)'
+    OnClick = HZhzClick
+  end
+  object MaxSpeed: TLabel
+    AnchorSideRight.Control = DiagonalEdit
+    AnchorSideBottom.Side = asrBottom
+    Left = 18
+    Height = 20
+    Top = 237
+    Width = 182
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Максимальное ускорение'
+  end
+  object Nextt: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 296
+    Height = 31
+    Top = 278
+    Width = 132
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 20
+    Caption = 'Следующий'
+    TabOrder = 1
+    OnClick = NexttClick
+  end
+  object Previouss: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 20
+    Height = 30
+    Top = 279
+    Width = 118
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 20
+    Caption = 'Предыдущий'
+    TabOrder = 2
+    OnClick = PrevioussClick
+  end
+  object TitleEdit: TEdit
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ProducerEdit
+    Left = 170
+    Height = 107
+    Top = 20
+    Width = 273
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 15
+    BorderSpacing.Around = 5
+    TabOrder = 3
+    OnChange = TitleEditChange
+  end
+  object ProducerEdit: TEdit
+    AnchorSideTop.Control = NameMouse
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = LightCheckbox
+    Left = 170
+    Height = 34
+    Top = 132
+    Width = 273
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 4
+    OnChange = ProducerEditChange
+  end
+  object HZ: TEdit
+    AnchorSideTop.Control = Podsvetka
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = DiagonalEdit
+    Left = 210
+    Height = 28
+    Top = 196
+    Width = 233
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 5
+    OnChange = HZChange
+  end
+  object DiagonalEdit: TEdit
+    AnchorSideTop.Control = HZhz
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Nextt
+    Left = 210
+    Height = 29
+    Top = 229
+    Width = 233
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    ParentFont = False
+    TabOrder = 6
+  end
+end

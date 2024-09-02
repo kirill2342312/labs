@@ -1,0 +1,3 @@
+Logitech G PRO X SUPERLIGHT 2,Logitech,False,2000,40 G
+SORA V2,Ninjutso,False,8000,50
+Ardor gaming ,ardor,True,1000,20
